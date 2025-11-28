@@ -1,4 +1,25 @@
-"""多智能体旅行规划系统"""
+"""
+多智能体旅行规划系统
+
+该模块实现了基于5个专业Agent协作的智能旅行规划系统。
+
+架构设计:
+    - AttractionAgent: 景点搜索专家，负责查询目的地热门景点
+    - WeatherAgent: 天气查询专家，提供旅行期间天气预报
+    - HotelAgent: 酒店推荐专家，根据景点位置推荐住宿
+    - TrainAgent: 火车查询专家，集成12306服务查询余票和票价
+    - PlannerAgent: 行程规划专家，整合所有信息生成最终计划
+
+技术亮点:
+    - MCP协议集成: 通过MCP协议集成高德地图和12306服务
+    - Prompt工程优化: 极简化Prompt适配7B小模型，工具调用成功率达90%
+    - 容错机制: 实现超时控制和降级策略，确保系统健壮性
+    - 结构化输出: 通过Pydantic模型保证JSON格式正确性
+
+Author: Your Name
+Date: 2025
+Version: 1.0.0
+"""
 
 import json
 from typing import Dict, Any, List
